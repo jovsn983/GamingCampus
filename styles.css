@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  list-style-type: none;
+  cursor: default;
+}
+.all {
+  overflow: hidden;
+}
+nav {
+  background-color: #fff; /* Black background color */
+  position: fixed; /* Make it stick/fixed */
+  top: -100px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  z-index: 1;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav li {
+  list-style-type: none;
+  padding: 20px;
+  font-family: montserrat medium, arial;
+  text-transform: uppercase;
+}
+ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+a {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  position: relative;
+  cursor: pointer;
+}
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+@media screen and (max-height: 300px) {
+  ul {
+    margin-top: 40px;
+  }
+}
+
+/************************************************************BACKGROUND*****************************************************************************/
+
+.background {
+  background: url(./assets/img/bg.jpg) center/cover;
+  font-family: "montserrat medium", "arial";
+  text-transform: uppercase;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.background H2 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+.btn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-family: montserrat thin, arial;
+  padding: 15px 25px;
+  margin-top: 15px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+.btn:hover {
+  background: white;
+  color: black;
+  font-weight: 900;
+}
+.textbg {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/***************************************************************************BG BLANC****************************************************************/
+
+.entre1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "montserrat", "arial";
+  width: 100%;
+  height: 10vh;
+  background: whitesmoke;
+}
+
+/*************************************************************************BG BLACK*********************************************************************/
+
+.bgblack {
+  background: black;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  text-transform: uppercase;
+  font-family: montserrat, arial;
+  padding: 35px;
+}
+.gauche1 {
+  text-align: center;
+}
+.gauche1 h3,
+.gauche1 p {
+  margin: 20px 0;
+}
+.centre {
+  text-align: center;
+}
+.centre h3,
+.centre p {
+  margin: 20px 0;
+}
+.droite1 {
+  text-align: center;
+}
+.droite1 h3,
+.droite1 p {
+  margin: 20px 0;
+}
+#logos {
+  transition: 0.2s ease-in;
+}
+#logos:hover {
+  transform: scale(1.1);
+}
+
+/********************************************************************************NEWS DU CAMPUS********************************************************/
+
+.bloc3 {
+  padding: 10% 10%;
+  background: #f7f7f7;
+}
+.articles {
+  display: flex;
+  justify-content: space-between;
+  font-family: montserrat, arial;
+  margin-top: 5%;
+}
+.article:hover {
+  transform: scale(1.1);
+}
+.news {
+  font-family: montserrat, arial;
+  margin-top: 15px;
+}
+#newsroom {
+  float: right;
+  padding: 10px 15px;
+  border: 2px solid black;
+  background: none;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+#newsroom:hover {
+  background: black;
+  color: white;
+}
+
+.article {
+  width: 250px;
+  transition: 0.2s ease-in;
+}
+.article h4 {
+  margin-top: 10px;
+}
+.article p {
+  margin-top: 10px;
+  line-height: 30px;
+}
+
+.containerbtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+  font-family: montserrat thin, arial;
+  font-weight: 900;
+}
+
+.liens {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "logo info parents contact"
+    "logo info parents suivre"
+    "logo info parents suivre";
+  padding: 30px 10%;
+  text-align: center;
+  font-family: montserrat, arial;
+}
+.liensg {
+  grid-area: info;
+}
+.liensc {
+  grid-area: parents;
+}
+.liensc p {
+  line-height: 35px;
+}
+.contact {
+  grid-area: contact;
+}
+.suivre {
+  grid-area: suivre;
+}
+.suivre i {
+  cursor: pointer;
+}
+.liens h4 {
+  margin: 10px;
+}
+.suivre ul {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+.suivre p {
+  margin-top: 10px;
+}
+.partenaires {
+  display: grid;
+  grid-template-areas: "texte images";
+  font-family: montserrat, arial;
+  padding: 5%;
+}
+.partenaires h4 {
+  margin: 10px;
+}
+.partd {
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.partenaires2 {
+  background: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+}
+img {
+  cursor: pointer;
+}
+.partnerline,
+.partnerline2 {
+  display: flex;
+}
+.partnerline li {
+  padding: 10px 25px;
+}
+.partnerline2 li {
+  padding: 10px 25px;
+}
+/*********************************RESPONSIVE*************************************/
+@media screen and (max-width: 1000px) {
+  .entre1 p {
+    text-align: center;
+    padding: 30px;
+  }
+
+  .bgblack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .gauche1 {
+    padding-bottom: 150px;
+    padding-top: 100px;
+  }
+  .centre {
+    padding-bottom: 150px;
+  }
+  .droite1 {
+    padding-bottom: 150px;
+  }
+  .bloc3 {
+    padding-top: 50px;
+  }
+  .articles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5%;
+  }
+  .article {
+    padding-bottom: 100px;
+    text-align: center;
+  }
+  .containerbtn {
+    display: none;
+  }
+  .news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(0);
+  }
+  #newsroom {
+    margin-top: 50px;
+  }
+  .liensg,
+  .liensd,
+  .liensc {
+    font-size: 0.8rem;
+  }
+  .partenaires {
+    display: none;
+  }
+  .partenaires2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .partenaires2 li {
+    padding-top: 5%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #logofooter {
+    width: 120px;
+  }
+
+  .liens {
+    display: flex;
+    flex-direction: column;
+  }
+  .liensg,
+  .liensd,
+  .liensc {
+    padding-bottom: 5%;
+  }
+  .contact {
+    padding-bottom: 5%;
+  }
+  .suivre li {
+    padding-bottom: 5%;
+    font-size: 2rem;
+  }
+}
